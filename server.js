@@ -3,7 +3,7 @@ var express = require('express'),
 
 //app.use(express.static('angular-seed/app'));
   app.use(express.static('/'));
-        app.use(express.static(__dirname + '/sb-admin-angular/app'));
+        app.use(express.static(__dirname + '/public/app'));
 
     
 app.get('/', function(req, res){
