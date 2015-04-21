@@ -159,7 +159,16 @@ angular
 
     .state('dashboard.gauge',{
         templateUrl:'views/pages/gauge.html',
-        url:'/gauge'
+        controller:'GaugeCtrl',    
+        url:'/gauge',
+        resolve: {
+          loadMyFile:function($ocLazyLoad) {
+            return $ocLazyLoad.load({
+                name:'sbAdminApp',
+                files:['scripts/controllers/gaugeController.js']
+            });
+          }
+        }
     })
   }]);
 
