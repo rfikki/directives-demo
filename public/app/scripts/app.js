@@ -18,7 +18,7 @@ angular
     
     $ocLazyLoadProvider.config({
       debug:false,
-      events:true,
+      events:true
     });
 
     $urlRouterProvider.otherwise('/dashboard/home');
@@ -156,6 +156,11 @@ angular
        templateUrl:'views/ui-elements/grid.html',
        url:'/grid'
    })
+
+    .state('dashboard.gauge',{
+        templateUrl:'views/pages/gauge.html',
+        url:'/gauge'
+    })
   }]);
 
     
